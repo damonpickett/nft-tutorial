@@ -7,4 +7,16 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 contract NFT is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private currentTokenId;
+
+    constructor() ERC721("NFTTutorial", "NFT") {}
+
+    function mintTo(address recipient)
+        public
+        returns (uint256)
+    {
+        currentTokenId.increment();
+        uint256 newItemId = currentTokenId.current();
+        _safeMint(recipient, newItemId);
+        return newItemId;
+    }
 }
