@@ -12,4 +12,4 @@ task('mint', 'Mints from the NFT contract')
 });
 
 // This script takes in an instance of the contract deployed by this app...
-// It then calls the contracts mintTo() function
+// It then calls the contract's mintTo() function
