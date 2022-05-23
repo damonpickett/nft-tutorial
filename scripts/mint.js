@@ -10,3 +10,6 @@ task('mint', 'Mints from the NFT contract')
     });
     console.log(`Transaction Hash: ${transactionResponse.hash}`)
 });
+
+// This script takes in an instance of the contract deployed by this app...
+// It then calls the contracts mintTo() function
