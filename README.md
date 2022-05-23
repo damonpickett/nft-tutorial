@@ -1,0 +1,1 @@
+Tutorial from [Open Sea Docs](https://docs.opensea.io/docs/creating-an-nft-contract)

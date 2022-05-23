@@ -18,7 +18,7 @@ module.exports = {
       accounts: [`0x${ACCOUNT_PRIVATE_KEY}`]
     },
     polygon: {
-      chainId: 1,
+      chainId: 137,
       url: `https://polygon-rpc.com/${ALCHEMY_KEY}`,
       accounts: [`0x${ACCOUNT_PRIVATE_KEY}`]
     },
