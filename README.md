@@ -22,3 +22,5 @@ Ran terminal commands to mint tokens to my 'NFT Wallet' wallet:
 - `npx hardhat set-base-token-uri --base-url "https://{CID}.ipfs.dweb.link/metadata/"`
 - `npx hardhat mint --address {wallet address}` x 3
 - `npx hardhat token-uri --token-id {token id number}` (returns corresponding metadata)
+
+In part 4 of the tutorial we begin learning how verify your smart contract on Etherscan. This allows us to read and interact with the contract on Etherscan. It's also supposed to help build trust with the community since it allows them to ensure the code written is safe. So I created an Etherscan account and generated an api key and added `ETHERSCAN_API_KEY` to my .env file. I then entered `npx hardhat verify {contract address}` in the terminal. This produced an error initially but the contract was verified and I was able to see my contract on Etherscan.
