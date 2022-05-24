@@ -13,3 +13,12 @@ These functions are executed through the terminal.
 ##### May 24th, 2022
 
 Converted images folder and metadata folder to .car files via terminal and uploaded to IPFS via [nft.storage](https://nft.storage/)
+
+Added NFT contract functions to mint.js script
+
+Ran terminal commands to mint tokens to my 'NFT Wallet' wallet:
+- `npx hardhat compile`
+- `npx hardhat deploy`
+- `npx hardhat set-base-token-uri --base-url "https://{CID}.ipfs.dweb.link/metadata/"`
+- `npx hardhat mint --address {wallet address}` x 3
+- `npx hardhat token-uri --token-id {token id number}` (returns corresponding metadata)

@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/damonpickett/Documents/development/nft-tutorial/contracts/NFT.sol": {
-      "lastModificationDate": 1653159228457,
-      "contentHash": "8b697b033d79f04ad7d449811db68af8",
+      "lastModificationDate": 1653340482448,
+      "contentHash": "56649a5cdb681e4b35d689cf374403a9",
       "sourceName": "contracts/NFT.sol",
       "solcConfig": {
         "version": "0.8.1",

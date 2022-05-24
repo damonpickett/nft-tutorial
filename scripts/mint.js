@@ -38,4 +38,5 @@ task("token-uri", "Fetches the token metadata for the given token ID")
     console.log(`Metadata fetch response: ${JSON.stringify(metadata, null, 2)}`);
 });
 
-// This file deploys the smart contract and activates its functions
+// This file deploys the smart contract and makes function calls available...
+// via Terminal
