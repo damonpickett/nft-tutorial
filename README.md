@@ -10,3 +10,6 @@ At present, the primary functions of this app are:
 
 These functions are executed through the terminal.
 
+##### May 24th, 2022
+
+Converted images folder and metadata folder to .car files via terminal and uploaded to IPFS via [nft.storage](https://nft.storage/)
