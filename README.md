@@ -23,4 +23,44 @@ Ran terminal commands to mint tokens to my 'NFT Wallet' wallet:
 - `npx hardhat mint --address {wallet address}` x 3
 - `npx hardhat token-uri --token-id {token id number}` (returns corresponding metadata)
 
+## Verifying smart contract on Etherscan
 In part 4 of the tutorial we begin learning how verify your smart contract on Etherscan. This allows us to read and interact with the contract on Etherscan. It's also supposed to help build trust with the community since it allows them to ensure the code written is safe. So I created an Etherscan account and generated an api key and added `ETHERSCAN_API_KEY` to my .env file. I then entered `npx hardhat verify {contract address}` in the terminal. This produced an error initially but the contract was verified and I was able to see my contract on Etherscan.
+
+## Setting a token supply limit
+A constant is added to the top of the contract:
+`uint256 public constant TOTAL_SUPPLY = 10_000;`
+
+The following lines of code were added to the mintTo() function in NFT.sol:
+
+`uint256 tokenId = currentTokenId.current();`
+`require(tokenId < TOTAL_SUPPLY, "Max supply reached");`
+
+If the require line resolves to false then the function will not execute and the the user will not be charged.
+
+## Setting a price for minting your NFT
+A constant is added to the top of the contract:
+
+`uint256 public constant MINT_PRICE = 0.08 ether;`
+
+The `payable` modifier is added to the `mintTo()` function. And this require line is added to the function:
+
+`require(msg.value == MINT_PRICE, "Transaction value did not equal the mint price");`
+
+## Withdrawing Funds
+After adding `import "@openzeppelin/contracts/security/PullPayment.sol";` and extending `contract` with `PullPayment` (`contract NFT is ERC721, PullPayment`), and after re-deploying my contract and verifying, I can now navigate to my contract on Etherscan and withdraw payments to an address of my choosing (Contract -> Write Contract)
+
+## Roles and Access
+To prevent anyone other than myself from withdrawing funds from my contract, I've added `import "@openzeppelin/contracts/access/Ownable.sol";` to my imports, extended `contract` with `Ownable` and added this function:
+
+```sol
+function withdrawPayments(address payable payee) public override onlyOwner virtual {
+   super.withdrawPayments(payee);
+}
+```
+
+The ownership contract also gives me access to helpers such as `renounceOwnership()`, `transferOwnership()`, and `isOwner()`.
+
+
+
+
+
