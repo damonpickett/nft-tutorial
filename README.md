@@ -1,6 +1,13 @@
 # NFT Minter
 Tutorial from [Open Sea Docs](https://docs.opensea.io/docs/creating-an-nft-contract)
 
+## Tech Stack
+- Javascript
+- [Solidity](https://docs.soliditylang.org/en/v0.8.14/): For writing smart contract.
+- [Hardhat](https://hardhat.org/): Through hardhat I'm able to use terminal commands (eg. `npx hardhat compile`, `npx hardhat deploy`, `npx hardhat mint`, etc.) to interact with the testnet.
+- [Alchemy](https://www.alchemy.com/): My Alchemy project API key is used in my hardhat configuration file.
+- [nft.storage](https://nft.storage/): This app allows me to upload files (images, metadata) to IPFS and returns a CID which I then use to set the base URI in my smart contract.
+
 ##### May 23rd, 2022, 1:12pm PST
 
 At present, the primary functions of this app are:
@@ -24,7 +31,7 @@ Ran terminal commands to mint tokens to my 'NFT Wallet' wallet:
 - `npx hardhat token-uri --token-id {token id number}` (returns corresponding metadata)
 
 ## Verifying smart contract on Etherscan
-In part 4 of the tutorial we begin learning how verify your smart contract on Etherscan. This allows us to read and interact with the contract on Etherscan. It's also supposed to help build trust with the community since it allows them to ensure the code written is safe. So I created an Etherscan account and generated an api key and added `ETHERSCAN_API_KEY` to my .env file. I then entered `npx hardhat verify {contract address}` in the terminal. This produced an error initially but the contract was verified and I was able to see my contract on Etherscan.
+In part 4 of the tutorial we begin learning how to verify your smart contract on Etherscan. This allows us to read and interact with the contract on Etherscan. It's also supposed to help build trust with the community since it allows them to ensure the code written is safe. So I created an Etherscan account and generated an api key and added `ETHERSCAN_API_KEY` to my .env file. I then entered `npx hardhat verify {contract address}` in the terminal. This produced an error initially but the contract was verified and I was able to see my contract on Etherscan.
 
 ## Setting a token supply limit
 A constant is added to the top of the contract:
@@ -32,8 +39,11 @@ A constant is added to the top of the contract:
 
 The following lines of code were added to the mintTo() function in NFT.sol:
 
-`uint256 tokenId = currentTokenId.current();`
-`require(tokenId < TOTAL_SUPPLY, "Max supply reached");`
+```sol
+uint256 tokenId = currentTokenId.current();
+require(tokenId < TOTAL_SUPPLY, "Max supply reached");
+```
+
 
 If the require line resolves to false then the function will not execute and the the user will not be charged.
 
