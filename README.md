@@ -119,6 +119,12 @@ Ran terminal commands to mint tokens to my 'NFT Wallet' wallet:
 - `npx hardhat mint --address {wallet address}` x 3
 - `npx hardhat token-uri --token-id {token id number}` (returns corresponding metadata)
 
+---
+
+# Next Steps
+
+- Learn how to build an app with a front-end that charges for minting service.
+
 
 
 
