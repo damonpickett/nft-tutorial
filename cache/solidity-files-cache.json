@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/damonpickett/Documents/development/nft-tutorial/contracts/NFT.sol": {
-      "lastModificationDate": 1653446462377,
-      "contentHash": "007a62414d454c00247afc6cfe7044b5",
+      "lastModificationDate": 1653596526523,
+      "contentHash": "b6d63a1e235e464e9ad2d40d6aa61f67",
       "sourceName": "contracts/NFT.sol",
       "solcConfig": {
         "version": "0.8.1",
@@ -31,7 +31,8 @@
       "imports": [
         "@openzeppelin/contracts/token/ERC721/ERC721.sol",
         "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/security/PullPayment.sol"
+        "@openzeppelin/contracts/security/PullPayment.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
@@ -153,6 +154,43 @@
       ],
       "artifacts": [
         "PullPayment"
+      ]
+    },
+    "/Users/damonpickett/Documents/development/nft-tutorial/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1653082079258,
+      "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.1",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
       ]
     },
     "/Users/damonpickett/Documents/development/nft-tutorial/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
@@ -477,43 +515,6 @@
       ],
       "artifacts": [
         "Escrow"
-      ]
-    },
-    "/Users/damonpickett/Documents/development/nft-tutorial/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1653082079258,
-      "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
-      "solcConfig": {
-        "version": "0.8.1",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
       ]
     }
   }

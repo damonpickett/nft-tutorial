@@ -25,7 +25,7 @@ The code above allows for the terminal command `npx hardhat mint {address}`
 - [Alchemy](https://www.alchemy.com/): My Alchemy project API key is used in my hardhat configuration file.
 - [nft.storage](https://nft.storage/): This app allows me to upload files (images, metadata) to IPFS and returns a CID which I then use to set the base URI in my smart contract.
 
-## 1. Setting a basic project up
+## 1. Setting up a basic project
 - Created files `scripts` and `contracts`
 - Wrote first iteration of `NFT.sol`
 - Created `.env` file for `ALCHEMY_KEY` and `ACCOUNT_PRIVATE_KEY` (MM)
@@ -42,6 +42,15 @@ The code above allows for the terminal command `npx hardhat mint {address}`
 
 
 ## 3. Adding metadata and payments to your contract
+- Convert `metadata` and `images` folders to .car files via CLI: `npx ipfs-car --pack metadata --output metadata.car`
+- Upload car files to ipfs via [nft.storage](https://nft.storage/)
+- nft.storage provides you with a CID which is used to set your base uri (eg. "https://{CID}.ipfs.dweb.link/metadata/")
+- Compile, deploy contract in CLI. Take new contract address and update .env file. Source .env file in CLI: `source .env`
+- Then you set the base token URI, then you mint. All via CLI:
+`npx hardhat set-base-token-uri --base-url https://{CID}.ipfs.dweb.link/metadata/`
+`npx hardhat mint --address {your wallet address}` x 3 or however many files are in your metadata folder.
+- The metadata, which is saved in IPFS, is what is minted. The metadata contains the link to the image which is also saved on IPFS. 'Minted' simply means that an ERC token, which points to the metadata saved on IPFS, has been assigned to my wallet and this transaction has been recorded on the blockchain...I think.
+
 
 
 ## 4. Smart contract improvements
@@ -85,6 +94,8 @@ function withdrawPayments(address payable payee) public override onlyOwner virtu
 ```
 
 The ownership contract also gives me access to helpers such as `renounceOwnership()`, `transferOwnership()`, and `isOwner()`.
+
+---
 
 ##### May 23rd, 2022, 1:12pm PST
 

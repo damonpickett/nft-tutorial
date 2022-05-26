@@ -2,34 +2,34 @@
    "attributes" : [
       {
          "trait_type" : "level",
-         "value" : 3
+         "value" : 12
       },
       {
-         "trait_type" : "stamina",
-         "value" : 11.7
+         "trait_type" : "spookiness",
+         "value" : 94
       },
       {
          "trait_type" : "personality",
-         "value" : "sleepy"
+         "value" : "Unknowable"
       },
       {
          "display_type" : "boost_number",
-         "trait_type" : "aqua_power",
-         "value" : 30
+         "trait_type" : "power",
+         "value" : 145
       },
       {
          "display_type" : "boost_percentage",
-         "trait_type" : "stamina_increase",
-         "value" : 15
+         "trait_type" : "ghost",
+         "value" : 100
       },
       {
          "display_type" : "number",
          "trait_type" : "generation",
-         "value" : 1
+         "value" : 0
       }
    ],
-   "description" : "Friendly OpenSea Creature that enjoys long swims in the ocean.",
-   "external_url" : "https://example.com/?token_id=2",
-   "image" : "https://storage.googleapis.com/opensea-prod.appspot.com/creature/2.png",
-   "name" : "Boris McCoy"
+   "description" : "Those who dream risk a vist from...The Dreamcatcher!",
+   "external_url" : "https://www.instagram.com/p/CdtXkalJBqi/",
+   "image" : "https://bafybeiecsxi7emnkmhdl3f3j2al55m3yjxqqpqpfwzochi2qkmmkcbur3q.ipfs.nftstorage.link/images/dreamcatcher.png",
+   "name" : "Dreamcatcher"
 }

@@ -1,6 +1,35 @@
 {
-    "description" : "Friendly OpenSea Creature that enjoys long swims in the ocean.",
-    "external_url" : "https://example.com/?token_id=1",
-    "image" : "https://bafybeihslhol5draa26unhhe7j2crwedr4tyfrvmba5qt3kyxbvb5olk4i.ipfs.dweb.link/images/3.png",
-    "name" : "Dave Starbelly"
- }
+   "attributes" : [
+      {
+         "trait_type" : "level",
+         "value" : 9
+      },
+      {
+         "trait_type" : "weapons",
+         "value" : 72
+      },
+      {
+         "trait_type" : "personality",
+         "value" : "Fun-loving"
+      },
+      {
+         "display_type" : "boost_number",
+         "trait_type" : "power",
+         "value" : 63
+      },
+      {
+         "display_type" : "boost_percentage",
+         "trait_type" : "speed",
+         "value" : 92
+      },
+      {
+         "display_type" : "number",
+         "trait_type" : "generation",
+         "value" : 9
+      }
+   ],
+   "description" : "Some talk the talk. Weird Mummy walks the walk...WITH A VENGEANCE!",
+   "external_url" : "https://www.instagram.com/p/CUqap44vop8/",
+   "image" : "https://bafybeiecsxi7emnkmhdl3f3j2al55m3yjxqqpqpfwzochi2qkmmkcbur3q.ipfs.nftstorage.link/images/weird_mummy.png",
+   "name" : "Weird Mummy"
+}
