@@ -1,6 +1,10 @@
 # NFT Minter
 Tutorial from [Open Sea Docs](https://docs.opensea.io/docs/creating-an-nft-contract)
 
+## Summary
+
+This app gives me the ability to mint a digital file via my CLI. The `NFT.sol` file communicates with the rinkeby testnet blockchain while the various `/scripts` javascript files allow me to use my smart contract via my CLI.
+
 ## Tech Stack
 - Javascript
 - [Solidity](https://docs.soliditylang.org/en/v0.8.14/): For writing smart contract.
@@ -49,7 +53,7 @@ The code above allows for the terminal command `npx hardhat mint {address}`
 - Then you set the base token URI, then you mint. All via CLI:
 `npx hardhat set-base-token-uri --base-url https://{CID}.ipfs.dweb.link/metadata/`
 `npx hardhat mint --address {your wallet address}` x 3 or however many files are in your metadata folder.
-- The metadata, which is saved in IPFS, is what is minted. The metadata contains the link to the image which is also saved on IPFS. 'Minted' simply means that an ERC token, which points to the metadata saved on IPFS, has been assigned to my wallet and this transaction has been recorded on the blockchain...I think.
+- The metadata, which is saved in IPFS, is what is minted. The metadata contains the link to the image which is also saved on IPFS. 'Minted' simply means that an ERC token, which points to the metadata saved on IPFS, has been assigned to my wallet and this transaction has been recorded on the blockchain.
 
 
 
@@ -123,7 +127,8 @@ Ran terminal commands to mint tokens to my 'NFT Wallet' wallet:
 
 # Next Steps
 
-- Learn how to build an app with a front-end that charges for minting service.
+- Learn how to deploy an app with a front-end that charges for minting service.
+- Build my own NFT project
 
 
 
